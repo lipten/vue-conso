@@ -1,13 +1,11 @@
-# vue-slidePage
+# vue-conso
 
 ### Introduction
 
-vue-slidePage is a fullscreen scrolling component of Vue.js, Based on [slidePage](https://github.com/lipten/slidePage)
+vue-conso 是一个模拟浏览器web-console的vue组件，可以作为网站内捕获console和调试的工具。就像jsBin里的console工具一样。
 
 ### Demo
-
-* [simple](http://lipten.link/projects/slidePage3/examples/simple.html)
-* [custom](http://lipten.link/projects/slidePage3/examples/custom.html)
+http://lipten.link/projects/vue-conso/examples/demo.html
 
 ### Usage
 
