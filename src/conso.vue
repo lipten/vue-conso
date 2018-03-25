@@ -38,7 +38,7 @@
 </template>
 
 <script>
-import ConsoleGroup from '@/components/conso-group.vue';
+import ConsoleGroup from './conso-group.vue';
 
 const ConsoleType = {
   Error: 'log-error',
@@ -259,7 +259,7 @@ export default {
 </script>
 
 
-<style scoped lang="scss">
+<style scoped lang="less">
 
 .console-list {
   .line {

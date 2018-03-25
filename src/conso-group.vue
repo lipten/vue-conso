@@ -1,7 +1,7 @@
 <template>
   <div class="group">
-    <div class="key-value" v-for="(name) in getKeys(obj)" :key="name">
-      <span class="key">{{name}}:</span>
+    <div class="key-value" v-for="name in getKeys(obj)" :key="name">
+      <span class="key">{{name + ':'}}</span>
       <div v-if="!isObject(obj[name])" class="type" :class="isNull(obj[name]) ? 'null' : typeof obj[name]">{{isNull(obj[name]) ? 'null' : obj[name] + ''}}</div>
       <div v-else class="type" :class="typeof obj[name]">
         <em @click="handleExpand(name)">{{getType(obj[name])}}</em> 
@@ -75,7 +75,7 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style scoped lang="less">
 .group {
   margin-left: 0.5em;
   .key {
