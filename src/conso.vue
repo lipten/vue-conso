@@ -2,7 +2,7 @@
   <div class="console-list" ref="consoleList">
     <iframe ref="iframe" style="display:none"></iframe>
     <div class="line" v-if="!isObject(item.content)" :class="returnIcon(item)" v-for="item in store" :key="item.key">
-      <i></i><div class="type" :class="item.type == 'log-input' || (typeof item.content)" >{{isNull(item.content) ? 'null' : item.content + ''}}</div>
+      <i></i><div class="type" :class="item.type == 'log-input' || (isNull(item.content) ? 'null' : (typeof item.content))" >{{isNull(item.content) ? 'null' : item.content + ''}}</div>
     </div>
     <div class="line" v-else :class="returnIcon(item)">
       <i></i>
@@ -44,6 +44,7 @@ const ConsoleType = {
   Error: 'log-error',
   Normal: 'log',
   Input: 'log-input',
+  Tips: 'log-tips',
 }
 
 export default {
@@ -136,6 +137,9 @@ export default {
         type: ConsoleType.Normal,
         content: "Console was cleared"
       }]
+    },
+    getInputElment() {
+      return this.$refs['input']
     },
     storePush(data) {
       data.key = this.keyId++
@@ -230,6 +234,7 @@ export default {
       if (/^clear\(\)$/.test(input)) {
         this.clear()
         this.$refs['input'].value = '';
+        this.$refs['input'].focus()
         return false;
       }
       this.storePush({

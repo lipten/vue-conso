@@ -4121,10 +4121,6 @@ slice-ansi@1.0.0:
   dependencies:
     is-fullwidth-code-point "^2.0.0"
 
-slidePage@^3.1.4:
-  version "3.1.6"
-  resolved "https://registry.yarnpkg.com/slidePage/-/slidePage-3.1.6.tgz#19f20a127d9963a30817e4e6053cd996ae350e80"
-
 snake-case@^2.1.0:
   version "2.1.0"
   resolved "http://registry.npm.taobao.org/snake-case/download/snake-case-2.1.0.tgz#41bdb1b73f30ec66a04d4e2cad1b76387d4d6d9f"

@@ -9,16 +9,24 @@
 
   <body>
     <div id="app">
-			<conso></conso>
+			<conso ref="conso"></conso>
     </div>
 
     <script src="https://unpkg.com/vue@2.2.4/dist/vue.min.js"></script>
     <script src="../dist/index.js"></script>
     <script>
+      var ConsoType = window['conso'].Conso.ConsoleType
       new Vue({
         el: '#app',
         components: {
           'conso': window['conso'].Conso,
+        },
+        mounted: function() {
+          this.$refs.conso.getInputElment().focus()
+          this.$refs.conso.storePush({
+            type: ConsoType.Input,
+            content: 'Welcome! Enjoy yourself！'
+          })
         }
       })
 
