@@ -94,7 +94,7 @@ export default {
     }
   },
   mounted() {
-    document.addEventListener('keydown', this.keydown)
+    this.$el.addEventListener('keydown', this.keydown)
     var convertArr = ['log', 'debug', 'error']
     var newConsole = !!this.contentWindow ? this.contentWindow.console : this.$refs['iframe'].contentWindow.console
     var _this = this;
@@ -114,7 +114,7 @@ export default {
     
   },
   beforeDestroy() {
-    document.removeEventListener('keydown', this.keydown)
+    this.$el.removeEventListener('keydown', this.keydown)
   },
   computed: {
   },
