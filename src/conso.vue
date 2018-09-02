@@ -18,7 +18,7 @@
               <span class="key" v-if="getType(item.content) !== 'Array'">{{name}}:</span>
               <span class="value">
                 <span class="type preview" :class="(typeof item.content[name])">
-                  <em v-if="isObject(item.content[name])" @click="handleExpand(item.key)">{{getType(item.content[name])}}</em>
+                  <em v-if="isObject(item.content[name])">{{getType(item.content[name])}}</em>
                   <span v-else>
                     {{isNull(item.content[name]) ? 'null' : item.content[name] + ''}}
                   </span>

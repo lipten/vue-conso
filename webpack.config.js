@@ -1,4 +1,6 @@
 const webpack = require( 'webpack' )
+const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
+const PROJECT_ROOT = require( 'path' ).resolve( __dirname );
 
 module.exports = {
   entry: {
@@ -33,6 +35,11 @@ module.exports = {
     ]
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: `${ PROJECT_ROOT }/examples/demo.html`,
+      inject: 'head'
+    }),
     new webpack.optimize.UglifyJsPlugin( {
       minimize : true,
       sourceMap : false,
