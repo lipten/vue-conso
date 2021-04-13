@@ -5,7 +5,7 @@
 vue-conso 是一个模拟浏览器web-console的vue组件，可以作为网站内捕获console和调试的工具。就像jsBin里的console工具一样。
 
 ### Demo
-http://lipten.link/projects/vue-conso/examples/demo.html
+http://lipten.link/projects/vue_conso/examples/demo.html
 
 ### Usage
 
